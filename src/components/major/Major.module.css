@@ -230,8 +230,20 @@
 }
 
 @media (max-width: 390px) {
-  .search__box {
-    width: 350px;
+  .major__lower .search__box {
+    padding: 5px 10px;
     margin-left: -10px;
+    gap: 10px;
+    width: 320px;
+  }
+
+  .search__box .imgs__div {
+    gap: 1px;
+    margin-right: 6px;
+  }
+
+  .search__box input {
+    padding: 6px;
+    font-size: 14px;
   }
 }
