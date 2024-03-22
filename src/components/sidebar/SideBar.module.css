@@ -1,0 +1,89 @@
+.sidebar {
+  display: inline-flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 25px 15px;
+  min-height: 100vh;
+  background-color: rgba(204, 198, 39, 0.4);
+  animation: fadeInAnim 1.9s;
+  transition: 1s ease-in;
+}
+
+.sidebar img {
+  width: 25px;
+}
+
+.sidebar .menu {
+  display: block;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.sidebar .new__chat {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 15px;
+  gap: 10px;
+  background-color: antiquewhite;
+  font-size: 14px;
+  color: gray;
+  border-radius: 40px;
+  margin-top: 50px;
+}
+
+.sidebar .recent {
+  display: flex;
+  flex-direction: column;
+  animation: fadeInAnim 1.9s;
+}
+
+.sidebar .recent__title {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.sidebar .recent__entry {
+  display: flex;
+  gap: 10px;
+  align-items: start;
+  padding: 10px;
+  border-radius: 40px;
+  padding-right: 40px;
+  color: #282828;
+  cursor: pointer;
+}
+
+.sidebar .recent__entry:hover {
+  background-color: #fff;
+}
+
+.sidebar .lower {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar .lower__item {
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+/*  ANIMATIONS  */
+
+@keyframes fadeInAnim {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/*  RESPONSIVENESS  */
+
+@media (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
+}

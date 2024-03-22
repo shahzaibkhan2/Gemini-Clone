@@ -1,0 +1,230 @@
+.major {
+  flex: 1;
+  position: relative;
+  padding-bottom: 15vh;
+  min-height: 100vh;
+}
+
+.major .gemini__logo {
+  background: -webkit-linear-gradient(20deg, #4548ff, #9c9af1);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.major .navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #585858;
+  padding: 20px;
+  font-size: 22px;
+}
+
+.major .navigation img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.major__container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.major__container .title__style {
+  border: 1px solid rgb(165, 162, 162);
+  border-radius: 30px;
+  border-bottom-left-radius: 0px;
+  padding: 10px;
+  background: #f0f4f9;
+  line-height: 1.2;
+}
+
+.major .greeting {
+  padding: 20px;
+  color: #c4c7c5;
+  margin: 50px 0px;
+  font-size: 56px;
+  font-weight: 500;
+}
+
+.major .greeting span {
+  background: -webkit-linear-gradient(20deg, #4b90ff, #dbcd0f);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.major .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+  margin-bottom: 70px;
+  padding: 0 15px;
+}
+
+.major .card {
+  cursor: pointer;
+  padding: 15px;
+  height: 200px;
+  background-color: #f0f4f9;
+  position: relative;
+  border-radius: 10px;
+}
+
+.major .card img {
+  padding: 5px;
+  width: 35px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+.major .card p {
+  font-size: 17px;
+  color: #585858;
+}
+
+.major .card:hover {
+  background-color: #dfe4ea;
+}
+
+.major__lower {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-width: 900px;
+  padding: 0px 20px;
+  margin: auto;
+}
+
+.major__lower .search__box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #f0f4f9;
+  gap: 20px;
+  border-radius: 40px;
+}
+
+.search__box img {
+  width: 27px;
+  cursor: pointer;
+}
+
+.search__box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 8px;
+  font-size: 18px;
+}
+
+.search__box .imgs__div {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.major__lower .lower__info {
+  font-weight: 300;
+  font-size: 13px;
+  text-align: center;
+  margin: 15px auto;
+}
+
+.result {
+  max-height: 70vh;
+  padding: 0px 5%;
+  overflow-y: scroll;
+}
+
+.result::-webkit-scrollbar {
+  display: none;
+}
+
+.result__title {
+  margin: 40px 0;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.result img {
+  width: 45px;
+  border-radius: 50%;
+}
+
+.result__data {
+  display: flex;
+  gap: 20px;
+  align-items: start;
+}
+
+.loader {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.loader hr {
+  border: none;
+  border-radius: 4px;
+  background-color: #f6f7f8;
+  background-size: 800px 50px;
+  background: linear-gradient(to right, #9ed7ff, #ffffff, rgb(89, 150, 207));
+  height: 20px;
+  animation: loader 3s infinite linear;
+}
+
+/* ANIMATIONS */
+
+@keyframes loader {
+  0% {
+    background-position: -800px 0px;
+  }
+
+  100% {
+    background-position: 800px 0px;
+  }
+}
+
+.result__data p {
+  line-height: 1.8;
+  font-weight: 300;
+  font-size: 17px;
+}
+
+/*  RESPONSIVENESS  */
+
+@media (max-width: 600px) {
+  .major__lower {
+    flex: none;
+  }
+
+  .major__lower img {
+    width: 20px;
+  }
+
+  .search__box {
+    padding: 5px 10px;
+    margin-top: auto;
+  }
+
+  .search__box .imgs__div {
+    gap: 5px;
+  }
+
+  .major .cards {
+    display: block;
+  }
+
+  .major .card {
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
