@@ -66,9 +66,7 @@ const Major = () => {
               <img src={ImagesList.geminiStar} alt="gemini-icon" />
               {loading ? (
                 <div className={`${styles.loader}`}>
-                  <hr />
-                  <hr />
-                  <hr />
+                  <div>Loading...</div>
                 </div>
               ) : (
                 <p dangerouslySetInnerHTML={{ __html: resultData }}></p>

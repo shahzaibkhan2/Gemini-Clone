@@ -165,30 +165,39 @@
 
 .loader {
   display: flex;
-  width: 100%;
-  flex-direction: column;
-  gap: 10px;
 }
 
-.loader hr {
-  border: none;
-  border-radius: 4px;
-  background-color: #f6f7f8;
-  background-size: 800px 50px;
-  background: linear-gradient(to right, #9ed7ff, #ffffff, rgb(89, 150, 207));
-  height: 20px;
-  animation: loader 3s infinite linear;
+.loader div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 30px;
+  width: 200px; /* Adjust size as needed */
+  height: 200px; /* Adjust size as needed */
+  border-radius: 50%;
+  background: linear-gradient(
+    20deg,
+    #4b90ff,
+    #dbcd0f
+  ); /* Adjust color as needed */
+  margin-left: 200px;
+  animation: loader-animation 1.5s infinite ease-in-out;
+  color: #fff;
 }
 
-/* ANIMATIONS */
-
-@keyframes loader {
+@keyframes loader-animation {
   0% {
-    background-position: -800px 0px;
+    transform: scale(0);
+    opacity: 0.7;
   }
-
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
   100% {
-    background-position: 800px 0px;
+    transform: scale(0);
+    opacity: 0.7;
   }
 }
 
