@@ -173,14 +173,14 @@
   align-items: center;
   text-align: center;
   font-size: 30px;
-  width: 200px; /* Adjust size as needed */
-  height: 200px; /* Adjust size as needed */
+  width: 200px; 
+  height: 200px;
   border-radius: 50%;
   background: linear-gradient(
     20deg,
     #4b90ff,
     #dbcd0f
-  ); /* Adjust color as needed */
+  );
   margin-left: 200px;
   animation: loader-animation 1.5s infinite ease-in-out;
   color: #fff;
