@@ -167,10 +167,30 @@
   display: flex;
 }
 
+<<<<<<< HEAD
 .loader {
   width: 150px;
   height: 150px;
   position: relative;
+=======
+.loader div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 30px;
+  width: 200px; 
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(
+    20deg,
+    #4b90ff,
+    #dbcd0f
+  );
+  margin-left: 200px;
+  animation: loader-animation 1.5s infinite ease-in-out;
+  color: #fff;
+>>>>>>> 36e54285ccac14e5a4a4976ebc8751bf41ecb7a9
 }
 
 .loader div::before {
