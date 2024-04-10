@@ -56,6 +56,13 @@ const GeminiContextProvider = ({ children }) => {
     setInput("");
   };
 
+  const handleonEnter = async (event) => {
+    if (event.key === "Enter") {
+      onSent(input);
+      setInput("");
+    }
+  };
+
   const contextValue = {
     prevPrompts,
     setPrevPrompts,
@@ -68,6 +75,7 @@ const GeminiContextProvider = ({ children }) => {
     input,
     setInput,
     newChat,
+    handleonEnter,
   };
 
   return (

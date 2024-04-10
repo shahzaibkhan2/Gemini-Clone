@@ -167,37 +167,41 @@
   display: flex;
 }
 
-.loader div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 30px;
-  width: 200px; /* Adjust size as needed */
-  height: 200px; /* Adjust size as needed */
-  border-radius: 50%;
-  background: linear-gradient(
-    20deg,
-    #4b90ff,
-    #dbcd0f
-  ); /* Adjust color as needed */
-  margin-left: 200px;
-  animation: loader-animation 1.5s infinite ease-in-out;
-  color: #fff;
+.loader {
+  width: 150px;
+  height: 150px;
+  position: relative;
 }
 
-@keyframes loader-animation {
+.loader div::before {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 130px;
+  border: 4px solid rgba(0, 168, 255, 0.2);
+  border-top: 4px solid #00a8ff;
+  border-radius: 50%;
+  animation: spinAnim 1s linear infinite, glowAnim 2s infinite alternate;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@keyframes spinAnim {
   0% {
-    transform: scale(0);
-    opacity: 0.7;
-  }
-  50% {
-    transform: scale(1);
-    opacity: 1;
+    transform: rotate(0deg);
   }
   100% {
-    transform: scale(0);
-    opacity: 0.7;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes glowAnim {
+  0% {
+    box-shadow: 0 0 10px 0 rgba(0, 168, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 20px 0 rgba(0, 168, 255, 0.8);
   }
 }
 

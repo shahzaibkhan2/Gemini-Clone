@@ -12,12 +12,13 @@ const Major = () => {
     resultData,
     setInput,
     input,
+    handleonEnter,
   } = useContext(GeminiContext);
 
   return (
     <div className={`${styles.major}`}>
       <div className={`${styles.navigation}`}>
-        <p className={`${styles.gemini__logo}`}>Gemini</p>
+        <p className={`${styles.gemini__logo}`}>GEMINI CLONE</p>
         <img src={ImagesList.client} alt="user-image" />
       </div>
 
@@ -41,6 +42,7 @@ const Major = () => {
                 <p>
                   Find about all the flights timing. Be informed about the
                   latest news about flights.
+                  <div></div>
                 </p>
                 <img src={ImagesList.flight} alt="flight-image" />
               </div>
@@ -66,7 +68,7 @@ const Major = () => {
               <img src={ImagesList.geminiStar} alt="gemini-icon" />
               {loading ? (
                 <div className={`${styles.loader}`}>
-                  <div>Loading...</div>
+                  <div></div>
                 </div>
               ) : (
                 <p dangerouslySetInnerHTML={{ __html: resultData }}></p>
@@ -78,6 +80,7 @@ const Major = () => {
         <div className={`${styles.major__lower}`}>
           <div className={`${styles.search__box}`}>
             <input
+              onKeyDown={handleonEnter}
               onChange={(e) => setInput(e.target.value)}
               value={input}
               type="text"
