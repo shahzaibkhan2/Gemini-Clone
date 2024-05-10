@@ -1,4 +1,3 @@
-![Gemeni Clone](src/assets/shahzaib_gemini_clone.jpg)
 # The Google Gemini Clone Developed with React + Vite
 
 I Built a fully functional, responsive and beautiful Google Gemini Clone using JavaScript, HTML and CSS, Git 
@@ -9,3 +8,6 @@ at this address https://shahzaib-gemini-clone.vercel.app to make it available to
 Currently, available on:
 
 - [https://shahzaib-gemini-clone.vercel.app](https://shahzaib-gemini-clone.vercel.app)
+
+![Gemeni Clone](src/assets/shahzaib_gemini_clone.jpg)
+![Gemeni Clone](src/assets/shahzaib_gemini_clone3.jpg)
